@@ -98,28 +98,10 @@ Vehicle objects are handled using base-class pointers (`Vehicle*`) and resolved 
 
 ---
 
-## ▶️ Sample Output
-
-```text
-=== STARTING SMART TRANSIT SIMULATION ===
-
-[Minute 1]
-
-Route: Green Line City Central
-
-Bus BUS-101 is navigating city streets.
-[Boarding] 12 passengers entering BUS-101
-
-Express Train TRAIN-707 is flying down the dedicated tracks.
-[Boarding] 8 passengers entering TRAIN-707
-```
-
----
-
 ## 📂 Project Structure
 
 ```text
-SmartTransitSimulation/
+Public_Transport_Simulation System/
 │
 ├── main.cpp
 ├── README.md

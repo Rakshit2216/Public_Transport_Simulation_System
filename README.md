@@ -125,6 +125,36 @@ g++ main.cpp -o simulation
 
 ---
 
+## ▶️ Sample Output
+
+```text
+==============================
+ SMART TRANSIT SIMULATION
+==============================
+
+--------------------------------
+Minute 1
+--------------------------------
+
+========== Green Line City Central ==========
+0. Downtown Hub | Waiting Passengers : 13
+1. Metro Station A | Waiting Passengers : 8
+2. Suburban Terminal | Waiting Passengers : 6
+3. City Mall | Waiting Passengers : 11
+4. Airport Junction | Waiting Passengers : 9
+
+
+🚌 Bus BUS-101 reached Downtown Hub
+   Boarding from Downtown Hub
+   13 passengers boarded BUS-101
+   Status -> BUS-101 | Passengers : 13/50
+
+🚌 Bus BUS-202 reached City Mall
+   Boarding from City Mall
+   11 passengers boarded BUS-202
+   Status -> BUS-202 | Passengers : 11/50
+   ```
+
 ## 📚 Learning Outcomes
 
 - Object-Oriented Programming Design

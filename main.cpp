@@ -30,7 +30,7 @@ public:
     virtual ~Vehicle() {}
     virtual void move(string stationName) = 0;
 
-    void boardPassengers(int count) {
+    int boardPassengers(int count) {
         int availableSeats = capacity - currentPassengers;
         int boarded = min(availableSeats, count);
         currentPassengers += boarded;
@@ -40,6 +40,7 @@ public:
         if (boarded < count) {
             cout << "   Vehicle Full! " << count - boarded << " passengers left behind.\n";
         }
+        return boarded;
     }
 
     void releasePassengers() {
@@ -169,7 +170,7 @@ public:
                 if (currentTick % vehicle->getMoveInterval() != 0) {
                     continue;
                 }
-
+               
                 int stationIndex = vehicle->getCurrentStation();
                 Station &currentStation = route->stations[stationIndex];
 
@@ -178,12 +179,12 @@ public:
 
                
                 vehicle->releasePassengers();
-
+                
                
                 if (currentStation.waitingPassengers > 0) {
                     cout << "   Boarding from " << currentStation.stationName << endl;
-                    vehicle->boardPassengers(currentStation.waitingPassengers);
-                    currentStation.waitingPassengers = 0;
+                    int boarded = vehicle->boardPassengers(currentStation.waitingPassengers);
+                    currentStation.waitingPassengers -= boarded;
                 } else {
                     cout << "   No passengers waiting.\n";
                 }

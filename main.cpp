@@ -216,8 +216,8 @@ srand(time(0));
     greenLine.addStation(Station("Airport Junction", 4));
 
 
-    Bus* cityBus1 = new Bus("BUS-101", 0);            // Bus starts from station 0
-    ExpressTrain* bulletTrain = new ExpressTrain("TRAIN-707", 2); // Train starts from station 2
+    Bus* cityBus1 = new Bus("BUS-101", 0);           
+    ExpressTrain* bulletTrain = new ExpressTrain("TRAIN-707", 2);
     Bus* cityBus2 = new Bus("BUS-202", 3);
 
    
